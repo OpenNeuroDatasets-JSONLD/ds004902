@@ -1,17 +1,62 @@
 {
   "participant_id": {
-    "Description": "Unique participant label"
+    "Description": "Unique participant label",
+    "Annotations": {
+      "IsAbout": {
+        "TermURL": "nb:ParticipantID",
+        "Label": "Participant ID"
+      },
+      "VariableType": "Identifier"
+    }
   },
   "Gender": {
     "Description": "Participant gender",
     "Levels": {
       "F": "Biological female",
       "M": "Biological male"
+    },
+    "Annotations": {
+      "IsAbout": {
+        "TermURL": "nb:Sex",
+        "Label": "Sex"
+      },
+      "VariableType": "Categorical",
+      "Levels": {
+        "M": {
+          "TermURL": "snomed:248153007",
+          "Label": "Male"
+        },
+        "F": {
+          "TermURL": "snomed:248152002",
+          "Label": "Female"
+        }
+      },
+      "MissingValues": []
     }
   },
   "Age": {
     "Description": "Participant age (years)",
-    "Units": "years"
+    "Units": "years",
+    "Annotations": {
+      "IsAbout": {
+        "TermURL": "nb:Age",
+        "Label": "Age"
+      },
+      "VariableType": "Continuous",
+      "Format": {
+        "TermURL": "nb:FromFloat",
+        "Label": "float"
+      },
+      "MissingValues": [
+        "n/a",
+        "N/A",
+        "na",
+        "NA",
+        "nan",
+        "NaN",
+        ""
+      ]
+    }
   },
   "SessionOrder": {
     "Description": "Participant session order label",
@@ -22,7 +67,7 @@
   },
   "EEG_SamplingTime_Open_NS": {
     "Description": "Eyes-open EEG sampling time (time of day) in NS"
-  }, 
+  },
   "EEG_SamplingTime_Closed_NS": {
     "Description": "Eyes-closed EEG sampling time (time of day) in NS"
   },
@@ -57,10 +102,10 @@
     "Description": "Overall score of itme 3(Standard deviation of RT) of PVT after sleep deprivation"
   },
   "PANAS_P_NS": {
-    "Description": "Overall score of the Positive Affect(PA) measured by PANAS after normal sleep"
+    "Description": "Overall score of the Positive Affect(PA) measured by PANAS after\u00a0normal sleep"
   },
   "PANAS_P_SD": {
-    "Description": "Overall score of the Positive Affect(PA) measured by PANAS after sleep deprivation"
+    "Description": "Overall score of the Positive Affect(PA) measured by PANAS after\u00a0sleep deprivation"
   },
   "PANAS_N_NS": {
     "Description": "Overall score of the Negative Affect(NA) measured by PANAS after normal sleep"
@@ -72,7 +117,7 @@
     "Description": "Overall score of the ATQ after participants' normal sleep"
   },
   "ATQ_SD": {
-    "Description": "Overall score of the ATQ after participants' sleep deprivation"
+    "Description": "Overall score of the ATQ after participants' sleep\u00a0deprivation"
   },
   "SAI_NS": {
     "Description": "Overall score of the SAI after participants' normal sleep"
